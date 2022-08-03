@@ -21,7 +21,6 @@ export default function Home({ data }) {
 				<link rel="icon" href="img/favicon-32x32.png" />
 			</Head>
 			<main className="w-full h-screen bg-bg-color flex justify-center items-center">
-				{console.log(data)}
 				<div role="section" className="w-[412px] h-[416px] bg-card-bg rounded-[30px] p-[32px]">
 					<div className="w-[48px] h-[48px] bg-star-bg rounded-full flex justify-center items-center">
 						<img src="img/icon-star.svg" alt="star" />
@@ -66,7 +65,6 @@ export async function getStaticProps() {
 		});
 
 		data = await res.json();
-		console.log('data=======', data);
 	} catch (e) {
 		error = e.toString();
 	}

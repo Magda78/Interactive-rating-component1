@@ -4,7 +4,7 @@ export const numbersSlice = createSlice({
 	name: 'number',
 	initialState: {
 		list: [],
-        removed: []
+		removed: []
 	},
 	reducers: {
 		addNumber: (state, action) => {
@@ -13,10 +13,10 @@ export const numbersSlice = createSlice({
 		},
 		removeNumber: (state, action) => {
 			const removeItem = state.list.filter((item) => item.id == action.payload);
-            const delatedItem = state.list.filter((item) => item.id !== action.payload)
-      state.list = removeItem;
-      state.removed = delatedItem;
-    }
+			const delatedItem = state.list.filter((item) => item.id !== action.payload);
+			state.list = removeItem;
+			state.removed = delatedItem;
+		}
 	}
 });
 
