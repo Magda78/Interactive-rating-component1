@@ -34,7 +34,9 @@ export default function Home({ data }) {
 						improve our offering!
 					</div>
 					<div className="flex justify-between mt-[24px] mb-[32px]">
-						{data.map((item) => <Numbers name={item.name} key={item.id} id={item.id} addedId={addedIds} />)}
+						{Array.from(data).map((item) => (
+							<Numbers name={item.name} key={item.id} id={item.id} addedId={addedIds} />
+						))}
 					</div>
 					<button
 						onClick={submitHandler}
