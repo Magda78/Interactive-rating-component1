@@ -34,7 +34,7 @@ export default function Home({data}) {
 						improve our offering!
 					</div>
 					<div className="flex justify-between mt-[24px] mb-[32px]">
-						{data.map((item) => (
+						{data?.map((item) => (
 							<Numbers name={item.name} key={item.id} id={item.id} addedId={addedIds} />
 						))}
 					</div>
@@ -66,7 +66,7 @@ export async function getStaticProps() {
 		});
 
 		data = await res.json();
-		console.log('data=======', data);
+		console.log('data=======', typeof(data));
 	} catch (e) {
 		error = e.toString();
 	}
